@@ -1,22 +1,29 @@
-*{
+* {
     box-sizing: border-box;
     font-weight: lighter;
 }
 
-.row{
-    width: auto;
-    /* height: auto; */
+.sub1, .sub2, .sub3{
+    float: left;
     background-color: gray;
     border: 3px solid black;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    padding: 3px 0.1px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    padding: 3px 0.1px; 
+}
+
+.container{
+    top: 60px;
+}
+
+.row{
+    width: 100%;
+    top: 60px;
 }
 
 h1{
     text-align: center;
 }
-
 
 h3{
     border: 3px solid black;
@@ -27,11 +34,11 @@ h3{
     position: relative;
     bottom: 5px;
     width: 150px;
-    margin-bottom: auto;
 }
 
 p{
     padding: 5px;
+    font-size: 20px;
 }
 
 .chicken{
@@ -47,36 +54,32 @@ p{
     background-color: rgb(204, 204, 18);
 }
 
-
 /* desktop version  */
-@media (min-width: 992px){
-    .col-lg-4{
+@media only screen and (min-width: 992px){
+    .sub1, .sub2, .sub3{
         float: left;
-        width: 30.33%;
+        width: 33%;
     }
 }
 
 /*tablet version*/
-@media (min-width: 768px) and (max-width: 991px) {
-    .col-md-6 {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .sub1, .sub2, .sub3{
         float: left;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        
     }
 
-    .col-md-12 {
-        float: left;
+    .sub1, .sub2 {
+        width: 49%;
+    }
+
+    .sub3{
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
 /*mobile version*/
-@media (max-width: 767px) {
-    .col-sm-12 {
+@media only screen and (max-width: 767px) {
+    .sub1, .sub2, .sub3{
         float: left;
         width: 100%;
     }
